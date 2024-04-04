@@ -10,7 +10,7 @@
                         <NuxtLink class="home_header_links" to="/">{{ $t('viewAllNews') }}</NuxtLink>
                     </div>
                     <div class="home_content_main home_content_container_main">
-                        <div class="home_sub_view">
+                        <NuxtLink :to="`${language}/about`" class="home_sub_view">
                                     <div class="home_sub_view_img">
                                         <img src="@/assets/images/home_1.png" alt="#">
                                     </div>
@@ -22,8 +22,8 @@
                                         <p>{{ $t('solvingProblemsText') }}
                                         </p>
                                     </div>
-                                </div>
-                                <div class="home_sub_view">
+                                </NuxtLink>
+                                <NuxtLink :to="`${language}/about`" class="home_sub_view">
                                     <div class="home_sub_view_img">
                                         <img src="@/assets/images/home_2.png" alt="#">
                                     </div>
@@ -35,8 +35,8 @@
                                         <p>{{$t('solvingProblemsText')}}
                                         </p>
                                     </div>
-                                </div>
-                                <div class="home_sub_view">
+                                </NuxtLink>
+                                <NuxtLink :to="`${language}/about`" class="home_sub_view">
                                     <div class="home_sub_view_img">
                                         <img src="@/assets/images/home_3.png" alt="#">
                                     </div>
@@ -47,8 +47,8 @@
                                         <h2>{{$t('careerAtNetsol')}}</h2>
                                         <p>{{$t('solvingProblemsText')}} </p>
                                     </div>
-                                </div>
-                                <div class="home_sub_view">
+                                </NuxtLink>
+                                <NuxtLink :to="`${language}/about`" class="home_sub_view">
                                     <div class="home_sub_view_img">
                                         <img src="@/assets/images/home_4.png" alt="#">
                                     </div>
@@ -59,7 +59,7 @@
                                         <h2>{{ $t('leasingLifeConference') }}</h2>
                                         <p>{{$t('solvingProblemsText')}} </p>
                                     </div>
-                                </div>
+                                </NuxtLink>
                             </div>
                 </div>
            

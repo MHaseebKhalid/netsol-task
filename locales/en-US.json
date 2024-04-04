@@ -10,5 +10,9 @@
   "blog": "Blog",
   "autoFinanceSummit": "Auto Finance Summit 2023",
   "careerAtNetsol": "Career at Netsol",
-  "regions": "Regions"
+  "regions": "Regions",
+  "aboutHeading":"Modern Slavery Act Transparency Statement",
+  "aboutLine1":"NetSol Technologies, Inc. (“NETSOL”) acknowledges internationally proclaimed human rights and is fully committed to combat slavery and human trafficking. We design, develop, market, and export proprietary software products to customers in the automobile financing and leasing, banking, and financial services industries worldwide. We also provide system integration, consulting, and IT products and services in exchange for fees from customers.",
+  "aboutLine2":"We have seven wholly owned and six majority owned subsidiaries worldwide including the United Kingdom and our parent company is incorporated in the United States. NETSOL has more than 1500 permanent employees worldwide.",
+  "aboutLine3":"The NETSOL Human Rights Policy recognizes international human rights as set out in the Bill of Human Rights. Our Policy reflects our responsibilities around slavery and human trafficking."
 }

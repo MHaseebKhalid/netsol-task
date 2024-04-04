@@ -22,7 +22,7 @@ export default defineNuxtConfig({
     ],
     defaultLocale: 'en-US',
     vueI18nLoader: true,
-    strategy: 'prefix',
+    strategy: 'prefix_and_default',
     // vueI18n:{
     //   fallbackLocale: 'en-US',
     // },
