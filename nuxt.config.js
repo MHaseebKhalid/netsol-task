@@ -20,7 +20,7 @@ export default defineNuxtConfig({
       { code: 'en-US', iso: 'en-US',name:'English(US)', file: 'en-US.json' },
       { code: 'zh-CN', iso: 'zh-CN',name:"Zhōngwén(ZH)", file: 'zh-CN.json' },
     ],
-    defaultLocale: 'en-US',
+    // defaultLocale: 'en-US',
     vueI18nLoader: true,
     strategy: 'prefix_and_default',
     // vueI18n:{
