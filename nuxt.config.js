@@ -9,6 +9,28 @@ export default defineNuxtConfig({
     'bootstrap/dist/css/bootstrap.css',
     "~/assets/css/style.css",
   ],
+  modules: [
+    '@nuxtjs/i18n',
+  ],
+
+  i18n: {
+    lazy:true,
+    langDir: 'locales',
+    locales: [
+      { code: 'en-US', iso: 'en-US',name:'English(US)', file: 'en-US.json' },
+      { code: 'zh-CN', iso: 'zh-CN',name:"Zhōngwén(ZH)", file: 'zh-CN.json' },
+    ],
+    defaultLocale: 'en-US',
+    vueI18nLoader: true,
+    strategy: 'prefix',
+    // vueI18n:{
+    //   fallbackLocale: 'en-US',
+    // },
+    // detectBrowserLanguage: {
+    //   useCookie: true,
+    //   cookieKey: 'i18n_redirected',
+    // },
+  },
   app: {
     head: {
       title: 'Netsol Assignment',
@@ -42,7 +64,7 @@ export default defineNuxtConfig({
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    'nuxt-swiper'
+    'nuxt-swiper',
   ],
 
   axios: {

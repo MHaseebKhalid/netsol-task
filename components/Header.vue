@@ -19,47 +19,41 @@
               <div class="language_dropdown">
                 <span class="header_button_content custom_buttom" id="lanDropdown" role="button" data-bs-toggle="dropdown"
                   aria-expanded="false">
-                  Regions
+                  {{$t('regions')}}
                 </span>
                 <ul class="dropdown-menu dropdown_custome_menu" aria-labelledby="lanDropdown">
                   <li>
-                    <NuxtLink to="/en-us" class="dropdown-item"><span class="dropdown-text">USA</span>
-                    </NuxtLink>
+                    <button @click="setLocale('en-US')" class="dropdown-item"><span class="dropdown-text">USA</span></button>
+                 
                   </li>
+                
                   <li>
-                    <NuxtLink to="/en-uk" class="dropdown-item"><span class="dropdown-text">UK</span>
-                    </NuxtLink>
-                  </li>
-                  <li>
-                    <NuxtLink to="/en-cn" class="dropdown-item"><span class="dropdown-text">China</span></NuxtLink>
-                  </li>
-                  <li>
-                    <NuxtLink to="en-pk" class="dropdown-item"><span class="dropdown-text">Pakistan</span></NuxtLink>
-                  </li>
+                    <button @click="setLocale('zh-CN')" class="dropdown-item"><span class="dropdown-text">China</span></button>
+                   </li>
+                
                 </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+
     
   </header>
 </template>
 
 
-<script>
-export default {
-  name: 'Header',
-  data() {
-    return {
-    
-    };
-  },
-  methods: {
-   
+<script setup lang="ts">
+const { locales, locale, setLocale } = useI18n();
 
+const language = computed({
+  get: () => locale.value,
+  set: (value) => {
+    setLocale(value);
   },
-}
+});
+
 </script>
 
 <style>

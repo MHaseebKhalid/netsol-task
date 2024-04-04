@@ -4,10 +4,10 @@
             
                 <div class="home_inner_content">
                     <div class="home_header">
-                        <div class="home_header_container"><span>News and Insights</span></div>
-                        <h2>Latest Insights from Leading Voices</h2>
-                        <h6>Solving the world’s problems through technology wouldn’t be possible without our most important invention: the NetSol. Have a look at our talented teams.</h6>
-                        <NuxtLink class="home_header_links" to="/">View All News</NuxtLink>
+                        <div class="home_header_container"><span>{{$t('newsAndInsights')}}</span></div>
+                        <h2>{{$t('latestInsights')}}</h2>
+                        <h6>{{$t('introText')}}</h6>
+                        <NuxtLink class="home_header_links" to="/">{{ $t('viewAllNews') }}</NuxtLink>
                     </div>
                     <div class="home_content_main home_content_container_main">
                         <div class="home_sub_view">
@@ -16,12 +16,10 @@
                                     </div>
                                     <div class="home_sub_view_text">
                                         <span class="home_sub_view_text_label mb-3">
-                                            News
+                                            {{$t('news')}}
                                         </span>
-                                        <h2>Leasing Life Conference & Awards</h2>
-                                        <p>Solving the world's problems through technology wouldn't be possible without our
-                                            most
-                                            important invention.
+                                        <h2>{{$t('leasingLifeConference')}}</h2>
+                                        <p>{{ $t('solvingProblemsText') }}
                                         </p>
                                     </div>
                                 </div>
@@ -31,11 +29,10 @@
                                     </div>
                                     <div class="home_sub_view_text">
                                         <span class="home_sub_view_text_label mb-3">
-                                            Blog
+                                            {{$t('blog')}}
                                         </span>
-                                        <h2>Auto Finance Summit 2023</h2>
-                                        <p>Solving the world's problems through technology wouldn't be possible without our
-                                            most important invention.
+                                        <h2>{{$t('autoFinanceSummit')}}</h2>
+                                        <p>{{$t('solvingProblemsText')}}
                                         </p>
                                     </div>
                                 </div>
@@ -45,11 +42,10 @@
                                     </div>
                                     <div class="home_sub_view_text">
                                         <span class="home_sub_view_text_label mb-3">
-                                            News
+                                            {{$t('news')}}
                                         </span>
-                                        <h2>Career at Netsol</h2>
-                                        <p>Solving the world's problems through technology wouldn't be possible without our
-                                            most important invention. </p>
+                                        <h2>{{$t('careerAtNetsol')}}</h2>
+                                        <p>{{$t('solvingProblemsText')}} </p>
                                     </div>
                                 </div>
                                 <div class="home_sub_view">
@@ -58,11 +54,10 @@
                                     </div>
                                     <div class="home_sub_view_text">
                                         <span class="home_sub_view_text_label mb-3">
-                                            Blog
+                                            {{$t('blog')}}
                                         </span>
-                                        <h2>Leasing Life Conference & Awards</h2>
-                                        <p>Solving the world's problems through technology wouldn't be possible without our
-                                            most important invention. </p>
+                                        <h2>{{ $t('leasingLifeConference') }}</h2>
+                                        <p>{{$t('solvingProblemsText')}} </p>
                                     </div>
                                 </div>
                             </div>
@@ -77,24 +72,20 @@
 .home_content_container_main {
     display: flex;
     flex-direction: row;
-    width: 100%;
-    align-self: baseline;
+    width: 90%;
+    align-self: center;
+    margin-left: 5%;
 }
 </style>
 
-<script>
+<script setup lang="ts">
+const { locales, locale, setLocale } = useI18n();
 
-export default {
-    components: {
-       
-    },
-    data() {
-        return {
-           
-        }
-    },
-    computed: {
-    },
-};
+const language = computed({
+  get: () => locale.value,
+  set: (value) => {
+    setLocale(value);
+  },
+});
 
 </script>
